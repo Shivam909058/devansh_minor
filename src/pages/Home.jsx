@@ -1,4 +1,4 @@
-// src/pages/Home.jsx
+
 
 import React, { useState } from 'react';
 import { summarizeText } from '../utils/summarize';
@@ -13,14 +13,14 @@ const Home = () => {
   const handleSummarize = () => {
     if (input.trim()) {
       setLoading(true);
-      // Simulate processing time
+      
       setTimeout(() => {
         const summarized = summarizeText(input);
         setSummary(summarized);
         addToHistory(input, summarized);
         setInput('');
         setLoading(false);
-      }, 500); // Adjust the timeout as needed
+      }, 500); 
     }
   };
 
